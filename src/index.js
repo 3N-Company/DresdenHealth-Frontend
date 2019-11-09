@@ -9,7 +9,6 @@ import { Provider, ReactReduxContext } from 'react-redux'
 
 const target = document.querySelector("#root")
 
-
 render(
     <Provider store={store} context={ReactReduxContext}>
         <ConnectedRouter history={history} context={ReactReduxContext}>
