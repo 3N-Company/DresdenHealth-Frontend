@@ -2,6 +2,7 @@ import {DRESDEN, TILE_LAYER_URL} from "../../constants/map.constants";
 import L from "leaflet"
 import DeffibrilatorsService from "../deffibrilators/DeffibrilatorsService";
 import leafletKnn from "leaflet-knn"
+import deff_img from "../../assets/img/mark.png"
 
 export class MapBuilder {
     constructor() {
@@ -12,7 +13,7 @@ export class MapBuilder {
             id: 'mapbox.light'
         }).addTo(map);
         this.__diffIcon = L.icon({
-            iconUrl: 'mark.png',
+            iconUrl: deff_img,
             iconSize: [32, 37],
             iconAnchor: [16, 37],
             popupAnchor: [0, -28]
