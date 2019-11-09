@@ -5,11 +5,12 @@ import AccidentPersonController from "./accident_person/accident_person.controll
 import AccidentMeController from "./accident_me/accident_me.controller";
 import AccidentOtherController from "./accident_other/accident_other.controller";
 import {ROUTES} from "../../../constants/routes";
+import AccidentMeRouter from "./accident_me/accident_me.router";
 
 function AccidentRouter() {
     return (
         <Switch>
-            <Route path={ROUTES.ACCIDENT.ME.H} component={AccidentMeController}/>
+            <Route path={ROUTES.ACCIDENT.ME.H} component={AccidentMeRouter}/>
             <Route path={ROUTES.ACCIDENT.OTHER.H} component={AccidentOtherController}/>
             <Route exact path={[ROUTES.ACCIDENT.H, ROUTES.H]} component={AccidentPersonController}/>
         </Switch>

@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const AccidentMeView = props => {
+const AccidentMeView = ({children}) => {
     return (
         <div className="header_title">
             <div className="container">
