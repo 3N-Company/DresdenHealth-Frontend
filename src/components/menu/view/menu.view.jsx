@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 const MenuView = ({children}) => {
     return (
-        <div>
-            {children}
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                {children}
+            </ul>
         </div>
     );
 };

@@ -7,7 +7,10 @@ import store, {history} from "./redux/store";
 import {ConnectedRouter} from "connected-react-router";
 import { Provider, ReactReduxContext } from 'react-redux'
 
-const target = document.querySelector("#root")
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
+
+const target = document.querySelector("#root");
 
 render(
     <Provider store={store} context={ReactReduxContext}>
@@ -16,7 +19,7 @@ render(
         </ConnectedRouter>
     </Provider>,
     target
-)
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

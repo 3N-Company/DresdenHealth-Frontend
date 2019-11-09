@@ -7,8 +7,9 @@ class MenuController extends Component {
     render() {
         return (
             <MenuView>
-                <MenuItemView/>
-                <MenuItemView/>
+                <MenuItemView link={"/sds"} name={"Test"}/>
+                <MenuItemView link={"/sfsdfs"} name={"test2"}/>
+                <MenuItemView link={"/sfsdfs"} name={"test23"}/>
             </MenuView>
         );
     }
