@@ -7,6 +7,8 @@ import store, {history} from "./redux/store";
 import {ConnectedRouter} from "connected-react-router";
 import { Provider, ReactReduxContext } from 'react-redux'
 
+import "leaflet/dist/leaflet.css"
+
 const target = document.querySelector("#root")
 
 render(
