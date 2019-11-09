@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const AccidentMeView = props => {
+const AccidentMeView = ({children}) => {
     return (
         <div>
             <h3>How much i feel bad:</h3>
-
+            {children}
         </div>
     );
 };
