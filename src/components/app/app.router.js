@@ -1,17 +1,17 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from "react-router";
+import AccidentController from "../content/accident/accident.controller";
 
-const AppRouter = props => {
+const AppRouter = () => {
     return (
-        <div>
-
-        </div>
+        <Switch>
+            <Route exact to={"/"} component={AccidentController}/>
+            <Route to={"/accident"} component={AccidentController}/>
+        </Switch>
     );
 };
 
-AppRouter.propTypes = {
-
-};
+AppRouter.propTypes = {};
 
 export default AppRouter;
