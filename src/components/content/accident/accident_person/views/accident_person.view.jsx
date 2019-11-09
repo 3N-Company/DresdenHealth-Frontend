@@ -11,11 +11,11 @@ function AccidentPersonView(props) {
                 <div className="row offset-1">
                     <div className="column col-md-6 col-sm-12">
                         <h6>When do you need help click here</h6>
-                        <h1> <Link to={ROUTES.ACCIDENT.ME.H}>I'm in trouble</Link><br/></h1>
+                        <h1 className={"big"}> <Link to={ROUTES.ACCIDENT.ME.H}>I'm in trouble</Link><br/></h1>
                     </div>
                     <div className="column col-md-6 col-sm-12">
                         <h6>If anyone need help click here</h6>
-                        <h1><Link to={ROUTES.ACCIDENT.OTHER.H}>Somebody in trouble</Link></h1>
+                        <h1 className={"big"}><Link to={ROUTES.ACCIDENT.OTHER.H}>Somebody in trouble</Link></h1>
                     </div>
                 </div>
             </div>

@@ -19,6 +19,9 @@
   }
 }
 @media (max-width: 600px) {
+
+  .big { font-size: 40px !important;}
+
   .container {
     padding: 0 15px;
   }
@@ -133,6 +136,11 @@
   display: table;
   clear: both;
 }
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar{
+  border: solid !important;
+}
+
 *,
 *::before,
 *::after {
@@ -237,6 +245,11 @@ a.link {
 a.link:hover {
   color: #f4493c;
 }
+
+.big {
+  font-size: 100px;
+}
+
 img,
 video {
   max-width: 100%;
@@ -1746,3 +1759,4 @@ blockquote:not(:last-child) {
   height: 80vh;
   z-index: 0;
 }
+
