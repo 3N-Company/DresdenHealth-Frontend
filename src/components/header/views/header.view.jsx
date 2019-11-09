@@ -1,19 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MenuController from "../../menu/menu.controller";
+import MenuButtonController from "../../menu/menuButton.controller";
 import { Link} from "react-router-dom";
 
 
 const HeaderView = props => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link className="navbar-brand" to={'/'}>Navbar</Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"/>
-            </button>
-            <MenuController/>
-        </nav>
+        <header className="header">
+            <div className="header_top container">
+                <div className="header_logo float_left">
+                    <Link to={'/'}>
+                        <img src="https://www.dropbox.com/s/dff4ofuslr4dezq/hearty.svg?raw=1" alt="" className="logo_dark"/>
+                        <img src="assets/img/logo-white.png" alt="" className="logo_white"/>
+                    </Link>
+                </div>
+
+                <MenuButtonController/>
+            </div>
+        </header>
     );
 };
 

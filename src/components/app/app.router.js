@@ -5,7 +5,7 @@ import AccidentController from "../content/accident/accident.controller";
 import {ROUTES} from "../../constants/routes";
 import DeffibrilatorsController from "../content/deffibrilators/deffibrilators.controller";
 
-const AppRouter = () => {
+const  AppRouter = () => {
     return (
         <Fragment>
             <Route path={ROUTES.ACCIDENT.H} component={AccidentController}/>

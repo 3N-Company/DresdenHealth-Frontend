@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from "react-dom"
-import './assets/css/index.css';
+import './assets/css/App.css';
+
 import AppController from './components/app/app.controller';
 import * as serviceWorker from './serviceWorker';
 import store, {history} from "./redux/store";

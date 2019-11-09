@@ -3,9 +3,15 @@ import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 
 function MenuItemView(props) {
+    const close = function () {
+        const wrapper = document.getElementById("menu");
+        const overlay = document.getElementById("overlay");
+        wrapper.classList.toggle('open');
+        overlay.classList.toggle('open');
+    };
     return (
-        <li className="nav-item active">
-            <Link className="nav-link" to={props.link}>{props.name}</Link>
+        <li>
+            <Link to={props.link} onClick={close}>{props.name}</Link>
         </li>
     );
 }
