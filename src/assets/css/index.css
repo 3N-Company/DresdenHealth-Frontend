@@ -1,1 +1,10 @@
 
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#deffibrilator_map {
+    height: 300px;
+    width: 100%;
+}
