@@ -12,11 +12,11 @@ class AccidentMeController extends Component {
                 <LevelsView>
                     <LevelItemView
                         to={ROUTES.ACCIDENT.ME.LEVELS.URGENT}
-                        title={"level 0"}
+                        title={"I'm dying bro"}
                     />
                     <LevelItemView
                         to={ROUTES.ACCIDENT.ME.LEVELS.LIGHT}
-                        title={"level 1"}
+                        title={"That is okay"}
                     />
                 </LevelsView>
             </AccidentMeView>
