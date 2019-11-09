@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 const AppView = ({children}) => {
     return (
         <div>
-            <Link to={"/"}>GOI</Link>
             {children}
         </div>
     );

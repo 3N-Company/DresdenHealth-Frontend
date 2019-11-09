@@ -1,5 +1,12 @@
-export default {
+export const ROUTES = {
+    H: "/",
     ACCIDENT: {
-        H: "/accident"
+        H: "/accident",
+        ME: {
+            H: "/accident/me"
+        },
+        OTHER: {
+            H: "/accident/other"
+        }
     }
 }
