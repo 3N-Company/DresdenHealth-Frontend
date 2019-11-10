@@ -11,7 +11,7 @@ const DeffibrilatorsView = props => {
     ) : ""
 
     return (
-        <div>
+        <div className="text_center">
             {controlButtons}
             {props.children}
         </div>

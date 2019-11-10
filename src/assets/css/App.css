@@ -452,8 +452,10 @@ input[type="submit"] {
 }
 button[disabled],
 html input[disabled] {
-  cursor: default;
+  cursor: not-allowed;
+  background: gray;
 }
+
 .form_group:not(:last-child) {
   margin-bottom: 25px;
 }
@@ -848,7 +850,7 @@ blockquote:not(:last-child) {
   right: -40%;
   bottom: 0;
   background: #ffffff;
-  z-index: 100;
+  z-index: 1200;
   -webkit-transition: all 0.4s cubic-bezier(0.63, 0.35, 0.1, 0.95);
   transition: all 0.4s cubic-bezier(0.63, 0.35, 0.1, 0.95);
 }
@@ -883,7 +885,7 @@ blockquote:not(:last-child) {
 }
 .main_nav.open {
   right: 0;
-  z-index: 600;
+  z-index: 1200;
 }
 .main_nav.open .close_nav:before {
   -webkit-transform: rotate(45deg);
@@ -970,7 +972,6 @@ blockquote:not(:last-child) {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 99;
   background: rgba(17, 17, 17, 0.9);
   opacity: 0;
   visibility: hidden;
@@ -981,7 +982,7 @@ blockquote:not(:last-child) {
 .main_overlay.open {
   opacity: 1;
   visibility: visible;
-  z-index: 430;
+  z-index: 1030;
 }
 /** 03. FOOTER
 ================================================== **/
@@ -1826,6 +1827,11 @@ tr:hover {
 .leaflet-routing-alt{
   padding: 40px;
 }
+
+.leaflet-right, .leaflet-left{
+  z-index: 425 !important;
+}
+
 
 .leaflet-right{
   margin-top: 15em;
