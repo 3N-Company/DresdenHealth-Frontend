@@ -5,7 +5,9 @@ import DeffibrilatorsController from "../../../../../deffibrilators/deffibrilato
 const HeartView = props => {
     return (
         <div>
-            1) Скорая вызвана <br/>
+            <p>
+                Вызвать скорую: <button onClick={props.handleCall}>Send emergency request</button>
+            </p>
             2) Другой пункт <br/>
             3) Хуярьте его деффибрилятором
             <DeffibrilatorsController
@@ -18,7 +20,7 @@ const HeartView = props => {
 };
 
 HeartView.propTypes = {
-
+    handleCall: PropTypes.func.isRequired
 };
 
 export default HeartView;

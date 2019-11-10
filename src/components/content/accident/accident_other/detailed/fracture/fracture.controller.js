@@ -3,9 +3,14 @@ import PropTypes from 'prop-types';
 import FractureView from "./views/fracture.view";
 
 class FractureController extends Component {
+
+    handleNotify(){
+        console.log("Notifying emergency")
+    }
+
     render() {
         return (
-            <FractureView/>
+            <FractureView handleCall={this.handleNotify}/>
         );
     }
 }

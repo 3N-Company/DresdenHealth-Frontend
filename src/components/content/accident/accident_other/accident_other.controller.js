@@ -14,6 +14,8 @@ class AccidentOtherController extends Component {
         this.props.dispatch(setTitle("Accident with other"))
     }
 
+
+
     render() {
         return (
             <AccidentOtherView>

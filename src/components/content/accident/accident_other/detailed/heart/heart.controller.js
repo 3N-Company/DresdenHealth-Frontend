@@ -3,9 +3,14 @@ import PropTypes from 'prop-types';
 import HeartView from "./views/heart.view";
 
 class HeartController extends Component {
+
+    handleNotify(){
+        console.log("Notifying emergency")
+    }
+
     render() {
         return (
-            <HeartView/>
+            <HeartView handleCall={this.handleNotify}/>
         );
     }
 }
