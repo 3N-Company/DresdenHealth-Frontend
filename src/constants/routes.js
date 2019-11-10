@@ -13,5 +13,10 @@ export const ROUTES = {
             H: "/accident/other"
         }
     },
-    FARMACY: {}
+    FARMACIES: {
+        H: "/farmacies"
+    },
+    DEFFIBRILATORS: {
+        H: "/deffibrilators"
+    }
 }

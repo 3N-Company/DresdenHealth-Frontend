@@ -1,26 +1,54 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {MapRenderer} from "../../../services/map/MapRenderer";
 import DeffibrilatorsService from "../../../services/deffibrilators/DeffibrilatorsService";
 import deff_img from "../../../assets/img/mark.png";
 import MapController from "../map/map.controller";
+import DeffibrilatorsView from "./views/deffibrilators.view";
 
 class DeffibrilatorsController extends Component {
 
     constructor(props) {
         super(props)
         this.id = 'deffibrilator_map'
+        this.state = {
+            controlEnabled: true,
+            auto: props.auto
+        }
+    }
+
+    setControlEnabled(controlEnabled) {
+        this.setState({controlEnabled})
+    }
+
+    findNearest(){
+        this.setControlEnabled(false)
+        this.setState({auto: true})
+        this.forceUpdate()
     }
 
     render() {
-        return <MapController
-            icon={deff_img}
-            data={DeffibrilatorsService.loadJson()}
-            mapId={this.id}
-            renderWithUserPosition={true} />
+        return (
+            <DeffibrilatorsView
+                control={this.props.control}
+                controlEnabled={this.state.controlEnabled}
+                onFindClick={this.findNearest.bind(this)}>
+                <MapController
+                    big={this.props.big}
+                    icon={deff_img}
+                    data={DeffibrilatorsService.loadJson()}
+                    mapId={this.id}
+                    renderWithUserPosition={this.state.auto}
+                />
+            </DeffibrilatorsView>
+        )
     }
 }
 
-DeffibrilatorsController.propTypes = {};
+DeffibrilatorsController.propTypes = {
+    auto: PropTypes.bool.isRequired,
+    big: PropTypes.bool.isRequired,
+    control: PropTypes.bool.isRequired
+};
 
 export default DeffibrilatorsController;

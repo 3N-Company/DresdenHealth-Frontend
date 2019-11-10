@@ -4,13 +4,30 @@ import {Route, Switch} from "react-router";
 import AccidentController from "../content/accident/accident.controller";
 import {ROUTES} from "../../constants/routes";
 import DeffibrilatorsController from "../content/deffibrilators/deffibrilators.controller";
+import FarmaciesController from "../content/farmacies/farmacies.controller";
 
-const  AppRouter = () => {
+const AppRouter = () => {
+
+    const withBigAutoProps = () => {
+        return {
+            big: true,
+            auto: false,
+            control: true
+        }
+    }
+
     return (
         <Fragment>
             <Route path={ROUTES.ACCIDENT.H} component={AccidentController}/>
             <Route exact path={ROUTES.H} component={AccidentController}/>
-            <Route exact path={"/deff"} component={DeffibrilatorsController}/>
+            <Route exact
+                   path={ROUTES.DEFFIBRILATORS.H}
+                   component={() => <DeffibrilatorsController {...withBigAutoProps()} />}
+            />
+            <Route exact
+                   path={ROUTES.FARMACIES.H}
+                   component={() => <FarmaciesController {...withBigAutoProps()} />}
+            />
         </Fragment>
     );
 };
