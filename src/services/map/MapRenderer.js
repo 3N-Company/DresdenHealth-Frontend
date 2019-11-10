@@ -1,6 +1,5 @@
 import L from "leaflet";
 import "leaflet-routing-machine"
-import {antPath} from 'leaflet-ant-path';
 import {DRESDEN, TILE_LAYER_URL} from "../../constants/map.constants";
 import leafletKnn from "leaflet-knn";
 
