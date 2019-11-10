@@ -1,5 +1,10 @@
 export const ROUTES = {
     H: "/",
+    AUTH: {
+        H: "/auth",
+        LOGIN: "/auth/login",
+        REGISTRATION: "/auth/registration"
+    },
     ACCIDENT: {
         H: "/accident",
         ME: {

@@ -6,6 +6,7 @@ import {ROUTES} from "../../../../constants/routes";
 import LevelsView from "../accident_me/views/levels.view";
 import {setTitle} from "../../../../redux/actions/main";
 import {connect} from "react-redux";
+import HeartAttackDescription from "./accident_other/heart_attack_description";
 
 class AccidentOtherController extends Component {
 
@@ -13,20 +14,23 @@ class AccidentOtherController extends Component {
         this.props.dispatch(setTitle("Accident with other"))
     }
 
+
+
     render() {
         return (
             <AccidentOtherView>
                 <LevelsView>
                     <LevelItemView
-                        to={ROUTES.ACCIDENT.ME.LEVELS.URGENT}
-                        title={"Heart attack"}
-                    />
+                        to={ROUTES.ACCIDENT.OTHER.HEART}
+                        title={"Heart attack"}>
+                        <HeartAttackDescription/>
+                    </LevelItemView>
                     <LevelItemView
-                        to={ROUTES.ACCIDENT.ME.LEVELS.LIGHT}
+                        to={ROUTES.ACCIDENT.OTHER.ANIMAL}
                         title={"Animal Stings"}
                     />
                     <LevelItemView
-                        to={ROUTES.ACCIDENT.ME.LEVELS.LIGHT}
+                        to={ROUTES.ACCIDENT.OTHER.FRACTURE}
                         title={"Fracture"}
                     />
                 </LevelsView>
