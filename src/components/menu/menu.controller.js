@@ -13,6 +13,7 @@ class MenuController extends Component {
                 <MenuItemView link={ROUTES.DEFFIBRILATORS.H} name={"Defibrillators"}/>
                 <MenuItemView link={ROUTES.FARMACIES.H} name={"Farmacies"}/>
                 <MenuItemView link={ROUTES.ACTUALL.H} name={"Actuall"}/>
+                <MenuItemView link={ROUTES.AUTH.H} name={"Login"}/>
             </MenuView>
         );
     }
