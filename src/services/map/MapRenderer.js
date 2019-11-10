@@ -1,5 +1,6 @@
 import L from "leaflet";
 import "leaflet-routing-machine"
+import {antPath} from 'leaflet-ant-path';
 import {DRESDEN, TILE_LAYER_URL} from "../../constants/map.constants";
 import leafletKnn from "leaflet-knn";
 
@@ -83,7 +84,10 @@ export class MapRenderer {
             waypoints: [
                 L.latLng(userPosition),
                 L.latLng(nearestDiff),
-            ]
+            ],
+            lineOptions: {
+                styles: [{color: 'black', opacity: 1, weight: 5}]
+            }
         }).addTo(this.__map);
     }
 
