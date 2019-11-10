@@ -2,8 +2,15 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AccidentMeLightView from "./views/accident_me.light.view";
 import FarmaciesController from "../../../farmacies/farmacies.controller";
+import {setTitle} from "../../../../../redux/actions/main";
+import {connect} from "react-redux";
 
 class AccidentMeLightController extends Component {
+
+    componentDidMount() {
+        this.props.dispatch(setTitle("Light Accident"))
+    }
+
     render() {
         return (
             <AccidentMeLightView>
@@ -19,4 +26,5 @@ class AccidentMeLightController extends Component {
 
 AccidentMeLightController.propTypes = {};
 
-export default AccidentMeLightController;
+
+export default connect() (AccidentMeLightController);
