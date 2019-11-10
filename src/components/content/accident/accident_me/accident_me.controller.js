@@ -4,6 +4,8 @@ import AccidentMeView from "./views/accident_me.view";
 import LevelsView from "./views/levels.view";
 import LevelItemView from "./views/level_item.view";
 import {ROUTES} from "../../../../constants/routes";
+import {setTitle} from "../../../../redux/actions/main";
+import {connect} from "react-redux";
 
 class AccidentMeController extends Component {
 
@@ -11,7 +13,9 @@ class AccidentMeController extends Component {
 
     }
 
-    
+    componentDidMount() {
+        this.props.dispatch(setTitle("Accident with me"))
+    }
 
     render() {
         return (
@@ -33,4 +37,4 @@ class AccidentMeController extends Component {
 
 AccidentMeController.propTypes = {};
 
-export default AccidentMeController;
+export default connect()(AccidentMeController);

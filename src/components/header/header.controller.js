@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import HeaderView from "./views/header.view";
 import MenuController from "../menu/menu.controller";
+import {connect} from "react-redux";
+import {stateToHeaderController} from "../../services/props_mappers/header_mappers";
 
 class HeaderController extends Component {
     constructor(props) {
@@ -20,12 +22,14 @@ class HeaderController extends Component {
 
     render() {
         return (
-            <HeaderView/>
+            <HeaderView title={this.props.title}/>
         );
     }
 }
 
 
-HeaderController.propTypes = {};
+HeaderController.propTypes = {
+    title: PropTypes.string.isRequired
+};
 
-export default HeaderController;
+export default connect(stateToHeaderController)(HeaderController);
