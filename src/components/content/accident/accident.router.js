@@ -12,6 +12,7 @@ function AccidentRouter() {
         <Switch>
             <Route path={ROUTES.ACCIDENT.ME.H} component={AccidentMeRouter}/>
             <Route path={ROUTES.ACCIDENT.OTHER.H} component={AccidentOtherController}/>
+            <Route path={ROUTES.ACCIDENT.OTHER.HEART} component={AccidentOtherController}/>
             <Route exact path={[ROUTES.ACCIDENT.H, ROUTES.H]} component={AccidentPersonController}/>
         </Switch>
     );

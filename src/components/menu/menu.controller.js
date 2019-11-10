@@ -9,6 +9,7 @@ class MenuController extends Component {
         return (
             <MenuView>
                 <MenuItemView link={"/"} name={"Home"}/>
+                <MenuItemView link={ROUTES.ACCIDENT.H} name={"Accident"}/>
                 <MenuItemView link={ROUTES.DEFFIBRILATORS.H} name={"Defibrillators"}/>
                 <MenuItemView link={ROUTES.FARMACIES.H} name={"Farmacies"}/>
                 <MenuItemView link={ROUTES.ACTUALL.H} name={"Actuall"}/>

@@ -10,7 +10,10 @@ export const ROUTES = {
             }
         },
         OTHER: {
-            H: "/accident/other"
+            H: "/accident/other",
+            HEART: "/accident/other/heart",
+            FRACTURE: "/accident/other/fracture",
+            ANIMAL: "/accident/other/animal",
         }
     },
     FARMACIES: {
