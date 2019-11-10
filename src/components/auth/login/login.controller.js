@@ -11,6 +11,7 @@ class LoginController extends Component {
     onSubmit(values, {setSubmitting}) {
         AuthService.login(values)
             .then(r => this.props.dispatch(push(ROUTES.H)))
+            .catch(() => alert("Error"))
             .finally(() => setSubmitting(false))
     }
 
@@ -29,7 +30,7 @@ class LoginController extends Component {
                     }
                     return errors;
                 }}
-                onSubmit={this.onSubmit}
+                onSubmit={this.onSubmit.bind(this)}
             >
                 {({
                       values,
