@@ -15,8 +15,8 @@ class AccidentService {
 
     send(){
         return axios.all([
-            axios.post(`${BASE_URL}${MESSAGE_FRIENDS}`, {message: this.message}, {withCredentials: true}),
-            axios.post(`${BASE_URL}${MESSAGE_DOCTOR}`, {message: this.message}, {withCredentials: true})
+            axios.post(`${BASE_URL}${MESSAGE_FRIENDS}`, this.message, {withCredentials: true}),
+            axios.post(`${BASE_URL}${MESSAGE_DOCTOR}`, this.message, {withCredentials: true})
         ])
     }
 }
