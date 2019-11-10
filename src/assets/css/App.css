@@ -1765,3 +1765,8 @@ blockquote:not(:last-child) {
   height: 300px
 }
 
+.map_container_big {
+  width: 100%;
+  height: 600px;
+}
+
