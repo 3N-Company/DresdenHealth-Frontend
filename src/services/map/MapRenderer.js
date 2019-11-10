@@ -22,8 +22,8 @@ export class MapRenderer {
     }
 
     __onEachFeature(feature, layer) {
-        let popupContent = "<p>I started out as a GeoJSON " +
-            feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
+        let popupContent = "<p><b>Place</b>:" + feature.properties.einrichtung + "<br/>" +
+           "<b>Beschreibung</b>:" + feature.properties.standortbeschreibung + "</p>";
 
         if (feature.properties && feature.properties.popupContent) {
             popupContent += feature.properties.popupContent;
