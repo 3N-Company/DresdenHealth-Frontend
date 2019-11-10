@@ -10,6 +10,18 @@
   max-width: 800px;
   padding: 0;
 }
+
+.leaflet-routing-container.leaflet-bar.leaflet-control{
+  color: black;
+  margin: 0;
+  bottom: 50px !important;
+  right: 10%;
+  max-width: 420px;
+  border: solid 3px !important;
+  border-radius: 5px;
+  background: white;
+}
+
 @media (max-width: 800px) {
   .container {
     padding: 0 50px;
@@ -21,12 +33,61 @@
 @media (max-width: 600px) {
 
   .big { font-size: 40px !important;}
+  .logo-text{
+    margin-top: 22px;
+  }
+
+  #deffibrilator_map{
+    height: 86vh !important;
+  }
+
+
+  .leaflet-right{
+    margin-top: 67vh !important;
+  }
+  .leaflet-routing-alt {
+
+    padding: 20px 40px !important;
+  }
+
+  .leaflet-routing-container.leaflet-bar.leaflet-control{
+    color: black;
+    margin: 0;
+    right: 10%;
+    padding-left: 20px;
+    width: 100%;
+    border-radius: 5px;
+    background: white;
+  }
+
+  table {
+    display: none;
+  }
 
   .container {
     padding: 0 15px;
   }
   .container.container_small {
     padding: 0 15px;
+  }
+}
+@media (max-width: 360px) {
+
+  #deffibrilator_map{
+    height: 84vh !important;
+  }
+
+  .leaflet-right{
+    margin-top: 0em !important;
+  }
+
+
+  .leaflet-right{
+    margin-top: 55vh !important;
+  }
+  .leaflet-routing-alt {
+
+    padding: 10px 30px !important;
   }
 }
 .column {
@@ -1766,16 +1827,11 @@ tr:hover {
   padding: 40px;
 }
 
-.leaflet-routing-container.leaflet-bar.leaflet-control{
-  color: black;
-  margin: 0;
-  top: 50px;
-  right: 10%;
-  max-width: 420px;
-  border: solid 3px !important;
-  border-radius: 5px;
-  background: white;
+.leaflet-right{
+  margin-top: 15em;
 }
+
+
 
 #map, #deffibrilator_map {
   width: 100%;
