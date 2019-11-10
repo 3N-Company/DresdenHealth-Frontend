@@ -6,6 +6,7 @@ class FractureController extends Component {
 
     handleNotify(){
         console.log("Notifying emergency")
+        alert("Emergency notified")
     }
 
     render() {

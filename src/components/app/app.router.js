@@ -6,6 +6,7 @@ import {ROUTES} from "../../constants/routes";
 import DeffibrilatorsController from "../content/deffibrilators/deffibrilators.controller";
 import FarmaciesController from "../content/farmacies/farmacies.controller";
 import ActuallController from "../content/actuall/actuall.controller";
+import AuthRouter from "../auth/auth.router";
 
 const AppRouter = () => {
 
@@ -34,6 +35,8 @@ const AppRouter = () => {
                    path={ROUTES.ACTUALL.H}
                    component={() => <ActuallController {...withBigAutoProps()} />}
             />
+            <Route path={ROUTES.AUTH.H} component={AuthRouter}/>
+
         </Fragment>
     );
 };
