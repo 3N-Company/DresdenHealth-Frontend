@@ -5,7 +5,8 @@ class AuthService {
 
     login(data) {
         return axios.get(`${BASE_URL}${LOGIN_URL}`, {
-            headers: {"Authorization": "Basic " + btoa(data.email + ":" + data.password)}
+            headers: {"Authorization": "Basic " + btoa(data.email + ":" + data.password)},
+            withCredentials: true
         })
     }
 
