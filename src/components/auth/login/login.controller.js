@@ -10,11 +10,9 @@ class LoginController extends Component {
 
     onSubmit(values, {setSubmitting}) {
         AuthService.login(values)
-            .then(()=> this.props.dispatch(push(ROUTES.H)))
-            .catch(() => alert("Error"))
+            .then(r => this.props.dispatch(push(ROUTES.H)))
             .finally(() => setSubmitting(false))
     }
-
 
     render() {
         return (
