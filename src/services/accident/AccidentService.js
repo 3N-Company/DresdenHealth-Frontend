@@ -14,9 +14,15 @@ class AccidentService {
     }
 
     send(){
+        const config = {
+            headers: {
+                'Content-Type': 'text/plain'
+            },
+            withCredentials: true
+        }
         return axios.all([
-            axios.post(`${BASE_URL}${MESSAGE_FRIENDS}`, this.message, {withCredentials: true}),
-            axios.post(`${BASE_URL}${MESSAGE_DOCTOR}`, this.message, {withCredentials: true})
+            axios.post(`${BASE_URL}${MESSAGE_FRIENDS}`, this.message, config),
+            axios.post(`${BASE_URL}${MESSAGE_DOCTOR}`, this.message, config)
         ])
     }
 }
