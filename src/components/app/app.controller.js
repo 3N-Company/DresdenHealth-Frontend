@@ -4,8 +4,10 @@ import HeaderController from "../header/header.controller";
 import AppRouter from "./app.router";
 import AppView from "./views/app.view";
 import MenuController from "../menu/menu.controller";
+import AuthService from "../../services/auth/AuthService";
 
 class AppController extends Component {
+
     render() {
         return (
             <AppView>

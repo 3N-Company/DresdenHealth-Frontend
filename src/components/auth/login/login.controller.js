@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import {Formik} from "formik";
 import AuthService from "../../../services/auth/AuthService";
 import {connect} from "react-redux";
+import {push} from "react-router-redux";
+import {ROUTES} from "../../../constants/routes";
 
 class LoginController extends Component {
 
     onSubmit(values, {setSubmitting}) {
         AuthService.login(values)
-            .then(console.log)
+            .then(()=> this.props.dispatch(push(ROUTES.H)))
+            .catch(() => alert("Error"))
             .finally(() => setSubmitting(false))
     }
 

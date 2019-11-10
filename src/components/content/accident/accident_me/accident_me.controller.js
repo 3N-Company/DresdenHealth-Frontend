@@ -6,14 +6,16 @@ import LevelItemView from "./views/level_item.view";
 import {ROUTES} from "../../../../constants/routes";
 import {setTitle} from "../../../../redux/actions/main";
 import {connect} from "react-redux";
+import AccidentService from "../../../../services/accident/AccidentService";
 
 class AccidentMeController extends Component {
 
-    urgentClick(){
-        console.log("Sending urging request")
+    urgentClick() {
+        AccidentService.send().catch((e) => alert("Error in urgent request"))
     }
 
-    lightClick(){}
+    lightClick() {
+    }
 
     componentDidMount() {
         this.props.dispatch(setTitle("Accident with me"))

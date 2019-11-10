@@ -14,7 +14,11 @@ class AccidentService {
     }
 
     send(){
-        this.sendMeDoctor()
-        this.sendMeFriend()
+        return axios.all([
+            axios.post(`${BASE_URL}${MESSAGE_FRIENDS}`, {message: this.message}),
+            axios.post(`${BASE_URL}${MESSAGE_DOCTOR}`, {message: this.message})
+        ])
     }
 }
+
+export default new AccidentService()
