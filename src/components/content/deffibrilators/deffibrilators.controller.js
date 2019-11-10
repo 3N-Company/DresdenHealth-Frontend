@@ -5,6 +5,8 @@ import DeffibrilatorsService from "../../../services/deffibrilators/Deffibrilato
 import deff_img from "../../../assets/img/mark.png";
 import MapController from "../map/map.controller";
 import DeffibrilatorsView from "./views/deffibrilators.view";
+import {connect} from "react-redux";
+import {setTitle} from "../../../redux/actions/main";
 
 class DeffibrilatorsController extends Component {
 
@@ -16,6 +18,13 @@ class DeffibrilatorsController extends Component {
             auto: props.auto
         }
     }
+
+    componentDidMount() {
+        if(this.props.setTitle){
+            this.props.dispatch(setTitle("Deffibrilators"))
+        }
+    }
+
 
     setControlEnabled(controlEnabled) {
         this.setState({controlEnabled})
@@ -46,9 +55,10 @@ class DeffibrilatorsController extends Component {
 }
 
 DeffibrilatorsController.propTypes = {
+    setTitle: PropTypes.bool,
     auto: PropTypes.bool.isRequired,
     big: PropTypes.bool.isRequired,
     control: PropTypes.bool.isRequired
 };
 
-export default DeffibrilatorsController;
+export default connect()(DeffibrilatorsController);

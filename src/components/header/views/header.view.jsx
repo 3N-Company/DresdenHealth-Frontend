@@ -14,7 +14,7 @@ const HeaderView = props => {
                         <img src="https://www.dropbox.com/s/dff4ofuslr4dezq/hearty.svg?raw=1" alt="" className="logo_dark"/>
                         <img src="assets/img/logo-white.png" alt="" className="logo_white"/>
                     </Link>
-                    <h1 className="mt-lg-5 logo-text">Test</h1>
+                    <h1 className="mt-lg-5 logo-text">{props.title}</h1>
                 </div>
 
                 <MenuButtonController/>
@@ -23,6 +23,8 @@ const HeaderView = props => {
     );
 };
 
-HeaderView.propTypes = {};
+HeaderView.propTypes = {
+    title: PropTypes.string.isRequired
+};
 
 export default HeaderView;

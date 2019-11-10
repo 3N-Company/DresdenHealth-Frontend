@@ -8,6 +8,8 @@ import deff_img from "../../../assets/img/mark.png";
 import DeffibrilatorsService from "../../../services/deffibrilators/DeffibrilatorsService";
 import DeffibrilatorsView from "../deffibrilators/views/deffibrilators.view";
 import FarmaciesView from "./views/farmacies.view";
+import {connect} from "react-redux";
+import {setTitle} from "../../../redux/actions/main";
 
 class FarmaciesController extends Component {
 
@@ -17,6 +19,12 @@ class FarmaciesController extends Component {
         this.state = {
             controlEnabled: true,
             auto: props.auto,
+        }
+    }
+
+    componentDidMount() {
+        if(this.props.setTitle){
+            this.props.dispatch(setTitle("Farmacies"))
         }
     }
 
@@ -48,9 +56,10 @@ class FarmaciesController extends Component {
 }
 
 FarmaciesController.propTypes = {
+    setTitle: PropTypes.bool,
     auto: PropTypes.bool.isRequired,
     big: PropTypes.bool.isRequired,
     control: PropTypes.bool.isRequired
 };
 
-export default FarmaciesController;
+export default connect()(FarmaciesController);

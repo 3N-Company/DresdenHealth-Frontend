@@ -12,7 +12,8 @@ const AppRouter = () => {
         return {
             big: true,
             auto: false,
-            control: true
+            control: true,
+            setTitle: true
         }
     }
 
