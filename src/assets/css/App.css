@@ -1754,23 +1754,28 @@ blockquote:not(:last-child) {
   }
 }
 
+tr {
+  cursor: pointer;
+}
+
+tr:hover {
+  font-weight: 800;
+}
+
+.leaflet-routing-alt{
+  padding: 40px;
+}
+
 .leaflet-routing-container.leaflet-bar.leaflet-control{
   color: black;
   margin: 0;
   top: 50px;
   right: 10%;
   max-width: 420px;
-  border: none !important;
+  border: solid 3px !important;
+  border-radius: 5px;
   background: white;
 }
-
-.leaflet-routing-alternatives-container{
-  padding: 20px;
-  padding-left: 50px;
-  padding-bottom: 20px;
-  padding-right: 50px;
-}
-
 
 #map, #deffibrilator_map {
   width: 100%;

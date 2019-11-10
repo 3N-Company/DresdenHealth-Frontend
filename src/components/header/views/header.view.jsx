@@ -14,6 +14,7 @@ const HeaderView = props => {
                         <img src="https://www.dropbox.com/s/dff4ofuslr4dezq/hearty.svg?raw=1" alt="" className="logo_dark"/>
                         <img src="assets/img/logo-white.png" alt="" className="logo_white"/>
                     </Link>
+                    <h1 className=" mt-5">Test</h1>
                 </div>
 
                 <MenuButtonController/>
