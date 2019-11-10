@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 import "leaflet/dist/leaflet.css"
 
-const target = document.querySelector("#root")
+const target = document.querySelector("#root");
 
 render(
     <Provider store={store} context={ReactReduxContext}>
