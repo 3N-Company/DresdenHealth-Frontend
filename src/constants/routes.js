@@ -22,12 +22,12 @@ export const ROUTES = {
         }
     },
     FARMACIES: {
-        H: "/farmacies"
+        H: "/pharmacies"
     },
     DEFFIBRILATORS: {
-        H: "/deffibrilators"
+        H: "/defibrillators"
     },
     ACTUALL: {
-        H: "/actuall"
+        H: "/relevant"
     }
 }

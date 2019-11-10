@@ -6,7 +6,7 @@ import {setTitle} from "../../../redux/actions/main";
 class ActuallController extends Component {
 
     componentDidMount() {
-        this.props.dispatch(setTitle("Actuall"))
+        this.props.dispatch(setTitle("Relevant"))
     }
 
 

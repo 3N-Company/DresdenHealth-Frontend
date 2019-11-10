@@ -6,7 +6,7 @@ const DeffibrilatorsView = props => {
     const controlButtons = props.control ? (
         <button onClick={props.onFindClick}
                 disabled={!props.controlEnabled}>
-            Find nearest deffibrilator
+            Find nearest defibrillator
         </button>
     ) : ""
 

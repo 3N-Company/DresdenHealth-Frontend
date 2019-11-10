@@ -15,7 +15,7 @@ class AccidentMeLightController extends Component {
         return (
             <AccidentMeLightView>
                 <FarmaciesController
-                    big={false}
+                    big={true}
                     auto={true}
                     control={false}
                 />

@@ -7,17 +7,18 @@ const AccidentOtherView = ({children}) => {
         <div>
             <div className="header_title">
                 <div className="container">
+                    <div className="gap_150"/>
                     <div className="row">
                         <div className="column col-12 text_center">
-                            <h6>I understand.</h6>
-                            <h1>Please choose what happend?</h1>
+                            <h6>I see.</h6>
+                            <h1>Please choose what happend.</h1>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="about">
                 <div className="container">
-                    <div className="gap_50"/>
+                    <div className="gap_150"/>
                     <div className="row offset-1">
                         {children}
                     </div>

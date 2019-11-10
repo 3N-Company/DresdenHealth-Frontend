@@ -5,6 +5,7 @@ const AccidentMeView = ({children}) => {
         <div>
             <div className="header_title">
                 <div className="container">
+                    <div className="gap_150"/>
                     <div className="row">
                         <div className="column col-12 text_center">
                             <h6>Okay.</h6>

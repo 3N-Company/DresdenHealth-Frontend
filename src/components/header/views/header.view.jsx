@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import MenuController from "../../menu/menu.controller";
 import MenuButtonController from "../../menu/menuButton.controller";
 import { Link} from "react-router-dom";
+import logo from '../../../assets/img/logo.svg'
 
 
 const HeaderView = props => {
@@ -11,7 +12,7 @@ const HeaderView = props => {
             <div className="header_top container">
                 <div className="header_logo float_left">
                     <Link to={'/'}>
-                        <img src="https://www.dropbox.com/s/dff4ofuslr4dezq/hearty.svg?raw=1" alt="" className="logo_dark"/>
+                        <img src={logo} alt="" className="logo_dark"/>
                         <img src="assets/img/logo-white.png" alt="" className="logo_white"/>
                     </Link>
                     <h1 className="mt-lg-5 logo-text">{props.title}</h1>

@@ -23,14 +23,15 @@ const FractureView = props => {
 
                     <div className="row">
                         <div className="column col-lg-6 offset-1 col-sm-11">
-                            <h5>What I should do?</h5>
-                            <p className="lead">First of all you need to call the ambulance about insure.
-                                You can do this with this button (it will send all needed info).
+                            <h5>What should I  do?</h5>
+                            <p className="lead">
+                                First of all you need to inform the ambulance about the accident.
+                                You can do this with the button below (it will send all the needed info).
                             </p>
                             <button onClick={props.handleCall}>Send emergency request</button>
                         </div>
                         <div className="column col-lg-5 col-sm-11">
-                            <h5>Next folow these steps</h5>
+                            <h5>Follow these steps</h5>
                             <ol style={{listStyle: "inside decimal-leading-zero"}}>
                                 <li>Call the ambulance</li>
                                 <li>Find nearest pharmacy (see map below)</li>

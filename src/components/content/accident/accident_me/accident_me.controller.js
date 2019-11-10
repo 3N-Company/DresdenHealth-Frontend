@@ -33,7 +33,7 @@ class AccidentMeController extends Component {
                     <LevelItemView
                         clickHandler={this.lightClick.bind(this)}
                         to={ROUTES.ACCIDENT.ME.LEVELS.LIGHT}
-                        title={"That is okay"}
+                        title={"It is almost fine"}
                     />
                 </LevelsView>
             </AccidentMeView>

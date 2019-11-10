@@ -21,7 +21,7 @@ class DeffibrilatorsController extends Component {
 
     componentDidMount() {
         if(this.props.setTitle){
-            this.props.dispatch(setTitle("Deffibrilators"))
+            this.props.dispatch(setTitle("Defibrillators"))
         }
     }
 
