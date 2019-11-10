@@ -6,6 +6,13 @@ import LevelItemView from "./views/level_item.view";
 import {ROUTES} from "../../../../constants/routes";
 
 class AccidentMeController extends Component {
+
+    imDyingClick(){
+
+    }
+
+    
+
     render() {
         return (
             <AccidentMeView>
