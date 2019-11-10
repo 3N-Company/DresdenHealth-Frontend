@@ -1,4 +1,5 @@
 import React from 'react';
+import FarmaciesController from "../../../../farmacies/farmacies.controller";
 
 const AccidentMeLightView = props => {
     return (
@@ -7,8 +8,8 @@ const AccidentMeLightView = props => {
                 <div className="container">
                     <div className="row">
                         <div className="column col-lg-7 col-sm-11 offset-1">
-                            <h6>Light Accedent</h6>
-                            <h2>Below you can found some useful information and info about nearest pharmicy</h2>
+                            <h6>Light</h6>
+                            <h2>Below you can found useful information what to do if someone is beaten</h2>
                         </div>
                     </div>
                 </div>
@@ -18,48 +19,34 @@ const AccidentMeLightView = props => {
                     <div className="gap_100"/>
 
                     <div className="row">
-                        <div className="column col-4 offset-1">
-                            <h6>What I should do?</h6>
-                            <p className="lead">We recommend to visit your Hausartz. </p>
-                        </div>
-                        <div className="column col-4">
-                            <h5>Services</h5>
-
-                            <p>
-                                UI/UX Design<br/>
-                                Brand Identity<br/>
-                                Animation & Motion Graphics<br/>
-                                Web Design<br/>
-                                Photography<br/>
-                                Illustration<br/>
-                                Art Direction
+                        <div className="column col-lg-6 offset-1 col-sm-11">
+                            <h5>What I should do?</h5>
+                            <p className="lead">
+                                First of all, try to keep calm. You can find some useful tips
+                                on our website. There is also an information about the
+                                pharmacies and hospitals next to you. Call you friends or family and inform them about
+                                your condition and location, so they can help you.
                             </p>
                         </div>
-                        <div className="column col-3">
-                            <h5>Awards</h5>
-
-                            <p>
-                                8 x <strong>Site of the Day</strong> Awwwards<br/>
-                                4 x <strong>Site of the Day</strong> CSS Award<br/>
-                                2 x <strong>Red Dot</strong> Award<br/>
-                                1 x <strong>Fwa</strong> Award<br/>
-                                1 x <strong>Site of the Month</strong> Awwwards
-                            </p>
+                        <div className="column col-lg-5 col-sm-11">
+                            <h5>Next folow these steps</h5>
+                            <ol style={{listStyle: "inside decimal-leading-zero"}}>
+                                <li>Call the ambulance</li>
+                                <li>Find nearest pharmacy (see map below)</li>
+                                <li>First help</li>
+                                <li>Wait for medicals</li>
+                            </ol>
                         </div>
                     </div>
-
-                    <div className="gap_100"/>
                 </div>
-
             </div>
-
+            <div className="gap_100"/>
             {props.children}
         </div>
+
     );
 };
 
-AccidentMeLightView.propTypes = {
-
-};
+AccidentMeLightView.propTypes = {};
 
 export default AccidentMeLightView;

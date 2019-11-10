@@ -22,7 +22,7 @@ const HeartView = props => {
                     <div className="row">
                         <div className="column col-lg-6 offset-1 col-sm-11">
                             <h5>What I should do?</h5>
-                            <p className="lead">First of all you need to inform ambulance about insure.
+                            <p className="lead">First of all you need to call the ambulance about insure.
                                 You can do this with this button (it will send all needed info).
                             </p>
                             <button onClick={props.handleCall}>Send emergency request</button>
@@ -30,7 +30,7 @@ const HeartView = props => {
                         <div className="column col-lg-5 col-sm-11">
                             <h5>Next folow these steps</h5>
                             <ol style={{listStyle: "inside decimal-leading-zero"}}>
-                                <li>Inform ambulance</li>
+                                <li>Call the ambulance</li>
                                 <li>Find nearest defibrillator (see map below)</li>
                                 <li>First help</li>
                                 <li>Wait for medicals</li>
