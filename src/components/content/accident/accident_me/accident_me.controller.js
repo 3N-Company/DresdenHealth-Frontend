@@ -9,9 +9,11 @@ import {connect} from "react-redux";
 
 class AccidentMeController extends Component {
 
-    imDyingClick(){
-
+    urgentClick(){
+        console.log("Sending urging request")
     }
+
+    lightClick(){}
 
     componentDidMount() {
         this.props.dispatch(setTitle("Accident with me"))
@@ -22,10 +24,12 @@ class AccidentMeController extends Component {
             <AccidentMeView>
                 <LevelsView>
                     <LevelItemView
+                        clickHandler={this.urgentClick.bind(this)}
                         to={ROUTES.ACCIDENT.ME.LEVELS.URGENT}
                         title={"I'm dying bro"}
                     />
                     <LevelItemView
+                        clickHandler={this.lightClick.bind(this)}
                         to={ROUTES.ACCIDENT.ME.LEVELS.LIGHT}
                         title={"That is okay"}
                     />
