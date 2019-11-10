@@ -9,7 +9,7 @@ class HeartController extends Component {
         this.props.dispatch(setTitle("Heart Attack"))
     }
     handleNotify(){
-        console.log("Notifying emergency")
+        console.log("Notifying emergency");
         alert("Emergency notified")
     }
 

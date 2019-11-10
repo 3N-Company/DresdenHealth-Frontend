@@ -51,6 +51,10 @@
     padding: 20px 40px !important;
   }
 
+  .map_container_small .leaflet-right {
+    margin-top: 36vh !important;
+  }
+
   .leaflet-routing-container.leaflet-bar.leaflet-control{
     color: black;
     margin: 0;

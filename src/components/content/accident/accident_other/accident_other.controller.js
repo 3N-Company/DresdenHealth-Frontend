@@ -23,7 +23,6 @@ class AccidentOtherController extends Component {
                     <LevelItemView
                         to={ROUTES.ACCIDENT.OTHER.HEART}
                         title={"Heart attack"}>
-                        <HeartAttackDescription/>
                     </LevelItemView>
                     <LevelItemView
                         to={ROUTES.ACCIDENT.OTHER.ANIMAL}

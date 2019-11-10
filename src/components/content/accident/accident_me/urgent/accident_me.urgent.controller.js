@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import AccidentMeView from "./views/accident_me.urgent.view";
+import {connect} from "react-redux";
+import {setTitle} from "../../../../../redux/actions/main";
 
 class AccidentMeUrgentController extends Component {
+    componentDidMount() {
+        this.props.dispatch(setTitle("Urgent Accident"))
+    }
+
     render() {
         return (
             <AccidentMeView>
@@ -13,4 +18,4 @@ class AccidentMeUrgentController extends Component {
 
 AccidentMeUrgentController.propTypes = {};
 
-export default AccidentMeUrgentController;
+export default connect()(AccidentMeUrgentController);

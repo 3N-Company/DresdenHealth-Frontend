@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import AnimalView from "./views/animal.view";
+import {connect} from "react-redux";
+import {setTitle} from "../../../../../../redux/actions/main";
 
 class AnimalController extends Component {
+
+    componentDidMount() {
+        this.props.dispatch(setTitle("Animal Sting"))
+    }
 
     handleNotify(){
         console.log("Notifying emergency")
@@ -18,4 +24,4 @@ class AnimalController extends Component {
 
 AnimalController.propTypes = {};
 
-export default AnimalController;
+export default connect() ( AnimalController);
