@@ -7,7 +7,9 @@ class LoginController extends Component {
 
     onSubmit(values, {setSubmitting}) {
         AuthService.login(values)
-            .then(() => setSubmitting(false))
+            .then(r=>{
+                ifr.status===
+            })
     }
 
     render() {
