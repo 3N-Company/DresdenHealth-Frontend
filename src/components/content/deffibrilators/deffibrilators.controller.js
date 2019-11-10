@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {MapRenderer} from "../../../services/map/MapRenderer";
 import DeffibrilatorsService from "../../../services/deffibrilators/DeffibrilatorsService";
 import deff_img from "../../../assets/img/mark.png";
+import MapController from "../map/map.controller";
 
 class DeffibrilatorsController extends Component {
 
@@ -11,23 +12,12 @@ class DeffibrilatorsController extends Component {
         this.id = 'deffibrilator_map'
     }
 
-    componentDidMount() {
-        const mapRenderer = new MapRenderer(
-            this.id,
-            DeffibrilatorsService.loadJson(),
-            deff_img
-        )
-        mapRenderer
-            .renderData()
-            .withUserPosition(mapRenderer.bindCallbacksToThis(
-                mapRenderer.renderNearest
-            ))
-    }
-
     render() {
-        return (
-            <div id={this.id}/>
-        );
+        return <MapController
+            icon={deff_img}
+            data={DeffibrilatorsService.loadJson()}
+            mapId={this.id}
+            renderWithUserPosition={true} />
     }
 }
 
