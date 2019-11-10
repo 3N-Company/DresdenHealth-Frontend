@@ -18,5 +18,8 @@ export const ROUTES = {
     },
     DEFFIBRILATORS: {
         H: "/deffibrilators"
+    },
+    ACTUALL: {
+        H: "/actuall"
     }
 }

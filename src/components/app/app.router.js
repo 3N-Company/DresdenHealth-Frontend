@@ -5,6 +5,7 @@ import AccidentController from "../content/accident/accident.controller";
 import {ROUTES} from "../../constants/routes";
 import DeffibrilatorsController from "../content/deffibrilators/deffibrilators.controller";
 import FarmaciesController from "../content/farmacies/farmacies.controller";
+import ActuallController from "../content/actuall/actuall.controller";
 
 const AppRouter = () => {
 
@@ -28,6 +29,10 @@ const AppRouter = () => {
             <Route exact
                    path={ROUTES.FARMACIES.H}
                    component={() => <FarmaciesController {...withBigAutoProps()} />}
+            />
+            <Route exact
+                   path={ROUTES.ACTUALL.H}
+                   component={() => <ActuallController {...withBigAutoProps()} />}
             />
         </Fragment>
     );
