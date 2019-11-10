@@ -2,15 +2,16 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Formik} from "formik";
 import AuthService from "../../../services/auth/AuthService";
+import {connect} from "react-redux";
 
 class LoginController extends Component {
 
     onSubmit(values, {setSubmitting}) {
         AuthService.login(values)
-            .then(r=>{
-                ifr.status===
-            })
+            .then(console.log)
+            .finally(() => setSubmitting(false))
     }
+
 
     render() {
         return (
@@ -68,4 +69,4 @@ class LoginController extends Component {
 
 LoginController.propTypes = {};
 
-export default LoginController;
+export default connect()(LoginController);
